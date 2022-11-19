@@ -1,0 +1,26 @@
+diff --git a/node_modules/react-native-paper/src/components/TextInput/TextInputOutlined.tsx b/node_modules/react-native-paper/src/components/TextInput/TextInputOutlined.tsx
+index 710839f..7146607 100644
+--- a/node_modules/react-native-paper/src/components/TextInput/TextInputOutlined.tsx
++++ b/node_modules/react-native-paper/src/components/TextInput/TextInputOutlined.tsx
+@@ -374,7 +374,7 @@ const Outline = ({
+       {
+         backgroundColor,
+         borderRadius: theme.roundness,
+-        borderWidth: focused ? 2 : 1,
++        borderWidth: focused ? 1 : 1,
+         borderColor: hasActiveOutline ? activeColor : outlineColor,
+       },
+     ]}
+diff --git a/node_modules/react-native-paper/src/components/TextInput/helpers.tsx b/node_modules/react-native-paper/src/components/TextInput/helpers.tsx
+index 39d5531..2732903 100644
+--- a/node_modules/react-native-paper/src/components/TextInput/helpers.tsx
++++ b/node_modules/react-native-paper/src/components/TextInput/helpers.tsx
+@@ -37,7 +37,7 @@ export const calculateLabelTopPosition = (
+ ): number => {
+   const customHeight = height > 0 ? height : 0;
+ 
+-  return Math.floor((customHeight - labelHeight) / 2 + optionalPadding);
++  return Math.floor(labelHeight + optionalPadding / 2);
+ };
+ 
+ export const calculateInputHeight = (
